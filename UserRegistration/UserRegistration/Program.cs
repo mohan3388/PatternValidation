@@ -41,6 +41,20 @@
                             Console.WriteLine("Not Validate");
                         }
                         break;
+                    case 3:
+                        Email Evalidation = new Email();
+                        Console.WriteLine("Enter Email: ");
+                        string Ename = Console.ReadLine();
+                        bool Eval = Evalidation.LNameValidation(Ename);
+                        if (Eval)
+                        {
+                            Console.WriteLine("Validate");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Not Validate");
+                        }
+                        break;
                     default:
                         Console.WriteLine("Enter Above option");
                         break;
