@@ -8,7 +8,7 @@
             Console.WriteLine("Welcome to User Registration Problem");
             while (check)
             {
-                Console.WriteLine("\n1.Firstname\n2.Lastname\n3.Email\n4.Mobile\n5.Password\n6.Password Include One Uppecase\n7.Password Include One Numeric");
+                Console.WriteLine("\n1.Firstname\n2.Lastname\n3.Email\n4.Mobile\n5.Password\n6.Password Include One Uppecase\n7.Password Include One Numeric\n8.Password Include One Special char");
                 Console.WriteLine("Enter the above option");
                 int Option = Convert.ToInt32(Console.ReadLine());
                 switch (Option)
@@ -117,6 +117,20 @@
                         string pass4 = Console.ReadLine();
                         bool val4 = passvalidation.PassIncludeOneSpecialChar(pass4);
                         if (val4)
+                        {
+                            Console.WriteLine("Validate");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Not Validate");
+                        }
+                        break;
+                    case 9:
+                        AllEmailSample Emvalidation = new AllEmailSample();
+                        Console.WriteLine("Enter Email: ");
+                        string emails = Console.ReadLine();
+                        bool emval = Emvalidation.EmailValidation(emails);
+                        if (emval)
                         {
                             Console.WriteLine("Validate");
                         }
