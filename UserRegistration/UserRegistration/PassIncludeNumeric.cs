@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace UserRegistration
 {
-    public class PassIncludeUppercase
+    public class PassIncludeNumeric
     {
-        public static string REGEX_PATTERN = "^[A-Z]{1,}[a-z]{7,}$";
+        public static string REGEX_PATTERN = "^[A-Z]{1,}[a-z]{6,}[0-9]{1,}$";
 
-        public bool PassIncludeOneUppercase(string Pass)
+        public bool PassIncludeOneNumeric(string Pass)
         {
             return Regex.IsMatch(Pass, REGEX_PATTERN);
         }

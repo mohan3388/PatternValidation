@@ -8,7 +8,7 @@
             Console.WriteLine("Welcome to User Registration Problem");
             while (check)
             {
-                Console.WriteLine("\n1.Firstname\n2.Lastname\n3.Email\n4.Mobile\n5.Password\n");
+                Console.WriteLine("\n1.Firstname\n2.Lastname\n3.Email\n4.Mobile\n5.Password\n6.Password Include One Uppecase\n7.Password Include One Numeric");
                 Console.WriteLine("Enter the above option");
                 int Option = Convert.ToInt32(Console.ReadLine());
                 switch (Option)
@@ -89,6 +89,20 @@
                         string pass2 = Console.ReadLine();
                         bool val2 = pavalidation.PassIncludeOneUppercase(pass2);
                         if (val2)
+                        {
+                            Console.WriteLine("Validate");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Not Validate");
+                        }
+                        break;
+                    case 7:
+                        PassIncludeNumeric pasvalidation = new PassIncludeNumeric();
+                        Console.WriteLine("Enter Password: ");
+                        string pass3 = Console.ReadLine();
+                        bool val3 = pasvalidation.PassIncludeOneNumeric(pass3);
+                        if (val3)
                         {
                             Console.WriteLine("Validate");
                         }
