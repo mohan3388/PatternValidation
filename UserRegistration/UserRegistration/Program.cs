@@ -8,7 +8,7 @@
             Console.WriteLine("Welcome to User Registration Problem");
             while (check)
             {
-                Console.WriteLine("\n1.Firstname\n2.Lastname\n");
+                Console.WriteLine("\n1.Firstname\n2.Lastname\n3.Email\n4.Mobile\n5.Password\n");
                 Console.WriteLine("Enter the above option");
                 int Option = Convert.ToInt32(Console.ReadLine());
                 switch (Option)
@@ -45,8 +45,36 @@
                         Email Evalidation = new Email();
                         Console.WriteLine("Enter Email: ");
                         string Ename = Console.ReadLine();
-                        bool Eval = Evalidation.LNameValidation(Ename);
+                        bool Eval = Evalidation.EmailValidation(Ename);
                         if (Eval)
+                        {
+                            Console.WriteLine("Validate");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Not Validate");
+                        }
+                        break;
+                    case 4:
+                        Mobile mvalidation = new Mobile();
+                        Console.WriteLine("Enter Mobile: ");
+                        string Mname = Console.ReadLine();
+                        bool Mval =mvalidation.MobileValidation(Mname);
+                        if (Mval)
+                        {
+                            Console.WriteLine("Validate");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Not Validate");
+                        }
+                        break;
+                    case 5:
+                        Password pvalidation = new Password();
+                        Console.WriteLine("Enter Password: ");
+                        string Pname = Console.ReadLine();
+                        bool Pval = pvalidation.PassValidation(Pname);
+                        if (Pval)
                         {
                             Console.WriteLine("Validate");
                         }
