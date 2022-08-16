@@ -45,8 +45,22 @@
                         Email Evalidation = new Email();
                         Console.WriteLine("Enter Email: ");
                         string Ename = Console.ReadLine();
-                        bool Eval = Evalidation.LNameValidation(Ename);
+                        bool Eval = Evalidation.EmailValidation(Ename);
                         if (Eval)
+                        {
+                            Console.WriteLine("Validate");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Not Validate");
+                        }
+                        break;
+                    case 4:
+                        Mobile mvalidation = new Mobile();
+                        Console.WriteLine("Enter Mobile: ");
+                        string Mname = Console.ReadLine();
+                        bool Mval =mvalidation.MobileValidation(Mname);
+                        if (Mval)
                         {
                             Console.WriteLine("Validate");
                         }

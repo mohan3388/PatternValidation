@@ -11,7 +11,7 @@ namespace UserRegistration
     {
         public static string REGEX_PATTERN = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$";
 
-        public bool LNameValidation(string email)
+        public bool EmailValidation(string email)
         {
             return Regex.IsMatch(email, REGEX_PATTERN);
         }
