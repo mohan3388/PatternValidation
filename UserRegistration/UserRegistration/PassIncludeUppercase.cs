@@ -9,7 +9,7 @@ namespace UserRegistration
 {
     public class PassIncludeUppercase
     {
-        public static string REGEX_PATTERN = "^[0-9]{8}$";
+        public static string REGEX_PATTERN = "^[A-Z]{1,}[a-z]{7,}$";
 
         public bool PassIncludeOneUppercase(string Pass)
         {
