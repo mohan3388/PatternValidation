@@ -83,6 +83,20 @@
                             Console.WriteLine("Not Validate");
                         }
                         break;
+                    case 6:
+                        PassIncludeUppercase pavalidation = new PassIncludeUppercase();
+                        Console.WriteLine("Enter Password: ");
+                        string pass2 = Console.ReadLine();
+                        bool val2 = pavalidation.PassIncludeOneUppercase(pass2);
+                        if (val2)
+                        {
+                            Console.WriteLine("Validate");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Not Validate");
+                        }
+                        break;
                     default:
                         Console.WriteLine("Enter Above option");
                         break;
