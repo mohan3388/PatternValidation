@@ -111,6 +111,20 @@
                             Console.WriteLine("Not Validate");
                         }
                         break;
+                    case 8:
+                        PassIncludeSpcialChar passvalidation = new PassIncludeSpcialChar();
+                        Console.WriteLine("Enter Password: ");
+                        string pass4 = Console.ReadLine();
+                        bool val4 = passvalidation.PassIncludeOneSpecialChar(pass4);
+                        if (val4)
+                        {
+                            Console.WriteLine("Validate");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Not Validate");
+                        }
+                        break;
                     default:
                         Console.WriteLine("Enter Above option");
                         break;
